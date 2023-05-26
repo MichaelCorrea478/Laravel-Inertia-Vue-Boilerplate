@@ -13,6 +13,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
     @yield('styles')
+    @routes
     @inertiaHead
 </head>
 <body class="hold-transition sidebar-mini">

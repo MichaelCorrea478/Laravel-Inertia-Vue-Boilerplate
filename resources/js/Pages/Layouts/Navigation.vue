@@ -1,4 +1,6 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
+
 defineProps({ name: String })
 
 </script>
@@ -36,12 +38,12 @@ defineProps({ name: String })
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <Link :href="route('pages.about')" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
                         Sobre nós
                     </p>
-                </a>
+                </Link>
             </li>
 
             <li class="nav-item">
