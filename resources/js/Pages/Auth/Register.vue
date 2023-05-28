@@ -18,7 +18,6 @@ const form = useForm({
                 <p class="login-box-msg fw-bold">Cadastrar</p>
 
                 <form @submit.prevent="form.post('/register')">
-                    <!-- @csrf -->
 
                     <div class="input-group mb-3">
                         <input type="text" name="name" class="form-control"

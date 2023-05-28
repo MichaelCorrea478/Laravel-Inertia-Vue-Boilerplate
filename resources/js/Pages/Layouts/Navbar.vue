@@ -30,14 +30,10 @@ const user = computed(() => page.props.auth.user)
                         Meu perfil
                     </a>
                     <div class="dropdown-divider"></div>
-                    <!-- <form method="POST" action="{{ route('logout') }}"> -->
-                        <!-- @csrf -->
-                        <Link :href="route('logout')" method="POST" as="button" class="dropdown-item">
-                        <!-- onclick="event.preventDefault(); this.closest('form').submit();"> -->
-                            <i class="mr-2 fas fa-sign-out-alt"></i>
-                            Logout
-                        </Link>
-                    <!-- </form> -->
+                    <Link :href="route('logout')" method="POST" as="button" class="dropdown-item">
+                        <i class="mr-2 fas fa-sign-out-alt"></i>
+                        Logout
+                    </Link>
                 </div>
             </li>
         </ul>

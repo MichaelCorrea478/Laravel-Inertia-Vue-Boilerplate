@@ -18,7 +18,6 @@ const form = useForm({
                 <p class="login-box-msg fw-bold">Login</p>
 
                 <form @submit.prevent="form.post('/login')">
-                    <!-- @csrf -->
 
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email" required autofocus v-model="form.email">
@@ -61,11 +60,9 @@ const form = useForm({
                     </div>
                 </form>
 
-                <!-- @if (Route::has('password.request')) -->
-                    <p class="mb-1">
-                        <Link :href="route('password.request')">Esqueceu a senha?</Link>
-                    </p>
-                <!-- @endif -->
+                <p class="mb-1">
+                    <Link :href="route('password.request')">Esqueceu a senha?</Link>
+                </p>
             </div>
             <!-- /.login-card-body -->
 
