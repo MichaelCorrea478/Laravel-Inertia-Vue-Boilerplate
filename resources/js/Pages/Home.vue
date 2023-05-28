@@ -9,7 +9,7 @@ defineProps({ name: String })
   <Layout :name="name">
     <Head title="Home" />
 
-    <div class="container-fluid">
+    <div class="container-fluid p-3">
         <h1>Welcome - Home</h1>
         <p>Hello {{ name }}, welcome to your first Inertia app!</p>
     </div>
