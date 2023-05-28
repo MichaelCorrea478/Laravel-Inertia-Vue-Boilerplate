@@ -1,5 +1,6 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
 
 const form = useForm({
     name: null,
@@ -80,6 +81,10 @@ const form = useForm({
                         </div>
                     </div>
                 </form>
+            </div>
+
+            <div class="card-body">
+                <Link :href="route('login')" method="GET">Já sou cadastrado.</Link>
             </div>
         </div>
     </div>

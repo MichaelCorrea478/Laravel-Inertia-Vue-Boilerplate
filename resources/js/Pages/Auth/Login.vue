@@ -68,6 +68,10 @@ const form = useForm({
                 <!-- @endif -->
             </div>
             <!-- /.login-card-body -->
+
+            <div class="card-footer">
+                <Link :href="route('register')">Cadastrar-se</Link>
+            </div>
         </div>
     </div>
 </template>

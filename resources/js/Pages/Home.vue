@@ -1,17 +1,21 @@
 <script setup>
 import Layout from './Layouts/Layout.vue'
-import { Head } from '@inertiajs/vue3'
+import { Head, usePage } from '@inertiajs/vue3'
+import { computed } from 'vue'
 
-defineProps({ name: String })
+const page = usePage()
+
+const user = computed(() => page.props.auth.user)
+
 </script>
 
 <template>
-  <Layout :name="name">
+  <Layout>
     <Head title="Home" />
 
     <div class="container-fluid p-3">
         <h1>Welcome - Home</h1>
-        <p>Hello {{ name }}, welcome to your first Inertia app!</p>
+        <p>Hello {{ user.name ?? '' }}, welcome to your first Inertia app!</p>
     </div>
 
 

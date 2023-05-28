@@ -1,7 +1,10 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3'
+import { computed } from 'vue'
 
-defineProps({ name: String })
+const page = usePage()
+
+const user = computed(() => page.props.auth.user)
 
 </script>
 
@@ -11,7 +14,7 @@ defineProps({ name: String })
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-            <a href="#" class="d-block">{{ name }}</a>
+            <a href="#" class="d-block">{{ user.name ?? '' }}</a>
         </div>
     </div>
 
@@ -20,12 +23,12 @@ defineProps({ name: String })
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
             data-accordion="false">
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <Link :href="route('home')" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
                         Dashboard
                     </p>
-                </a>
+                </Link>
             </li>
 
             <li class="nav-item">
@@ -50,7 +53,7 @@ defineProps({ name: String })
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
-                        Menu de doi níveis
+                        Menu de dois níveis
                         <i class="fas fa-angle-left right"></i>
                     </p>
                 </a>

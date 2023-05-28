@@ -4,14 +4,12 @@ import { Link } from '@inertiajs/vue3';
 import Navigation from './Navigation.vue'
 import Footer from './Footer.vue'
 
-defineProps({ name: String })
-
 </script>
 
 <template>
 <div class="wrapper">
 
-    <Navbar :name="name"></Navbar>
+    <Navbar></Navbar>
 
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -20,10 +18,10 @@ defineProps({ name: String })
             <img src="/images/AdminLTELogo.png" alt="AdminLTE Logo"
                 class="brand-image img-circle elevation-3"
                 style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">FinApp</span>
         </Link>
 
-        <Navigation :name="name"></Navigation>
+        <Navigation></Navigation>
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
